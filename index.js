@@ -20,10 +20,12 @@ const parameters = {
   username: "no-reply",
 };
 
-await mgmtClient.senderUsernames.createOrUpdate(
-  resourceGroupName,
-  emailServiceName,
-  domainName,
-  "no-reply",
-  parameters
-);
+(async function main() {
+  await mgmtClient.senderUsernames.createOrUpdate(
+    resourceGroupName,
+    emailServiceName,
+    domainName,
+    "no-reply",
+    parameters
+  );
+})();
